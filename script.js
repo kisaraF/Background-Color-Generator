@@ -18,20 +18,21 @@ color2.addEventListener('input' , setGradient);
 
 random.addEventListener('click' , addColors);
 
-var red = Math.floor(Math.random()*256);
-var green = Math.floor(Math.random()*256);
-var blue = Math.floor(Math.random()*256);
-
-var red2 = Math.floor(Math.random()*256);
-var green2 = Math.floor(Math.random()*256);
-var blue2 = Math.floor(Math.random()*256);
-
-
-var colorCon1 = "rgb(" + red + "," + green + "," + blue + ")";
-var colorCon2 = "rgb(" + red2 + "," + green2 + "," + blue2 + ")";
-
 function addColors(){
-	body.style.background = "linear-gradient(to right, " + colorCon1 + ", " + colorCon2 + ")";
-	css.textContent = "linear-gradient(to right, " + colorCon1.value + ", " + colorCon2.value + ")"
-}
+	var red = Math.floor(Math.random()*256).toString(16);
+	var green = Math.floor(Math.random()*256).toString(16);
+	var blue = Math.floor(Math.random()*256).toString(16);
 
+	var red2 = Math.floor(Math.random()*256).toString(16);
+	var green2 = Math.floor(Math.random()*256).toString(16);
+	var blue2 = Math.floor(Math.random()*256).toString(16);
+
+
+	var colorCon1 = "#"+red+green+blue;
+	var colorCon2 = "#"+red2+green2+blue2;
+
+	console.log(colorCon1);
+	console.log(colorCon2)
+	body.style.background = "linear-gradient(to right, " + colorCon1 + ", " + colorCon2 + ")";
+	css.textContent = "linear-gradient(to right, " + colorCon1 + ", " + colorCon2 + ")";
+}
